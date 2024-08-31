@@ -1,0 +1,398 @@
+@import 'variables';
+
+.form {
+    width: 300px;
+    height: 468px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 7, 94, 0.1);
+    background: linear-gradient(89.24deg, rgba(13, 116, 139, 0.6) -14.97%, rgba(26, 11, 115, 0.6) 81.3%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -23px;
+        left: -800px;
+        width: 1180px;
+        height: 538px;
+        background-image: url('../assets/formbg.svg');
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+        z-index: 1;
+    }
+
+    &__title,
+    &__subtitle,
+    &__desc,
+    &__input,
+    &__checkbox,
+    &__agreement,
+    &__button {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title,
+    &__subtitle {
+        text-transform: uppercase;
+        padding: 0;
+        @include font-stack($fontSize: 20px, $lineHeight: 27px, $fontColor: rgba(255, 255, 255, 1));
+    }
+
+    &__title {
+        margin: 0;
+        width: 159px;
+    }
+
+    &__subtitle {
+        margin: 10px 0 0 0;
+        width: 224px;
+    }
+
+    &__desc {
+        @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px);
+        width: 224px;
+        margin: 10px 0 15px 0;
+    }
+
+    &__input {
+        display: block;
+        width: 240px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid rgba(243, 243, 243, 0.7);
+        margin-bottom: 15px;
+        background-color: rgba(255, 255, 255, 0.3);
+
+        &::placeholder {
+            padding-left: 20px;
+            @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px, $fontColor: rgba(243, 243, 243, 1));
+        }
+    }
+
+    &__checkbox {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__custom-checkbox {
+        position: relative;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border: 1px solid rgba(255, 255, 255, 1);
+        border-radius: 4px;
+        vertical-align: sub;
+        cursor: pointer; 
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-image: url('../assets/check.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 0.2s ease-in;
+        }
+    }
+
+    &__checkbox:checked + &__custom-checkbox::before {
+        transform: translate(-50%, -50%) scale(1);
+        
+    }
+
+    &__agreement {
+        @include font-stack($fontWeight: 400, $fontSize: 12px, $lineHeight: 16px, $fontColor: rgba(243, 243, 243, 1));
+        width: 244px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        &-text {
+            width: 100%;
+            cursor: pointer; 
+        }
+
+        & a {
+            color: white;
+        }
+    }
+
+    &__button {
+        width: 240px;
+        height: 50px;
+        background-color: var(--bg-color-white);
+        @include font-stack($fontWeight: 700, $fontSize: 15px, $lineHeight: 20.5px, $fontColor: var(--titles));
+        border-radius: 50px;
+        border: none;
+        margin-top: 15px;
+    }
+
+    &__blue-ellipse {
+        width: 246px;
+        height: 246px;
+        background-color: rgba(59, 185, 198, 1);
+        position: absolute;
+        top: 306px;
+        left: -107px;
+        z-index: 1;
+        border-radius: 50%;
+        filter: blur(80px);
+    }
+    &-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 801px) {
+    .form {
+        width: 430px;
+
+        &__title {
+            width: auto;
+        }
+    
+        &__subtitle {
+            margin: 10px 0 0 0;
+            width: auto;
+        }
+
+        &::before {
+            top: -23px;
+            left: -700px;
+            width: 1180px;
+            height: 538px;
+            background-size: cover;
+        }
+        &-container {
+            width: 100%;
+            height: auto;
+            
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .form {
+        width: 925px;
+        height: 330px;
+        padding: 45px;
+
+        &::before {
+            top: -102px;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/bgimage.svg');
+        }
+
+        &__title,
+        &__subtitle {
+            @include font-stack($fontSize: 24px, $lineHeight: 32px);
+            width: auto;
+            margin: 0;
+        }
+    
+        &__desc {
+            @include font-stack($fontWeight: 400, $fontSize: 18px, $lineHeight: 25px);
+            width: auto;
+            margin: 10px 0 25px 0;
+        }
+
+        &__agreement {
+            order: 2; 
+            flex: 1 0 100%;
+            margin-top: 20px;
+            margin-bottom: 0;
+            @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px);
+            
+        }
+        &__button {
+            order: 1; 
+            flex: 1 0 240px;
+            max-width: 240px;
+            height: 50px;
+            margin: 0;
+        }
+        &__input {
+            flex: 1 0 240px; 
+            max-width: 240px;
+            height: 50px;
+            margin: 0;
+            margin-right: 20px;
+        }
+        &__blue-ellipse {
+            width: 284px;
+            height: 284px;
+            top:213px;
+            left: -138px;
+        }
+    &-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+}
+
+@media (min-width: 1281px) {
+    .form {
+        width: 1081px;
+        height: 330px;
+        padding: 50px 60px;
+
+        &::before {
+            top: -102px;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/bgimage.svg');
+        }
+
+        &__title,
+        &__subtitle {
+            @include font-stack($fontSize: 28px, $lineHeight: 38px);
+            width: auto;
+            margin: 0;
+        }
+    
+        &__desc {
+            @include font-stack($fontWeight: 400, $fontSize: 18px, $lineHeight: 25px);
+            width: auto;
+            margin: 10px 0 25px 0;
+        }
+
+        &__agreement {
+            order: 2; 
+            flex: 1 0 100%;
+            margin-top: 20px;
+            margin-bottom: 0;
+            @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px);
+            
+        }
+        &__button {
+            order: 1; 
+            flex: 1 0 240px;
+            max-width: 240px;
+            height: 50px;
+            margin: 0;
+        }
+        &__input {
+            flex: 1 0 240px; 
+            max-width: 240px;
+            height: 50px;
+            margin: 0;
+            margin-right: 20px;
+        }
+        &__blue-ellipse {
+            width: 284px;
+            height: 284px;
+            top:213px;
+            left: -138px;
+        }
+    &-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: left;
+    }
+
+}
+}
+
+
+@media (min-width: 1920px) {
+    .form {
+        width: 1180px;
+        height: 330px;
+        padding: 50px 60px;
+
+        &::before {
+            top: -102px;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/bgimage.svg');
+        }
+
+        &__title,
+        &__subtitle {
+            @include font-stack($fontSize: 28px, $lineHeight: 38px);
+            width: auto;
+            margin: 0;
+        }
+    
+        &__desc {
+            @include font-stack($fontWeight: 400, $fontSize: 18px, $lineHeight: 25px);
+            width: auto;
+            margin: 10px 0 25px 0;
+        }
+
+        &__agreement {
+            order: 2; 
+            flex: 1 0 100%;
+            margin-top: 20px;
+            margin-bottom: 0;
+            @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px);
+            
+        }
+        &__button {
+            order: 1; 
+            flex: 1 0 240px;
+            max-width: 240px;
+            height: 50px;
+            margin: 0;
+        }
+        &__input {
+            flex: 1 0 240px; 
+            max-width: 240px;
+            height: 50px;
+            margin: 0;
+            margin-right: 20px;
+        }
+        &__blue-ellipse {
+            width: 284px;
+            height: 284px;
+            top:213px;
+            left: -138px;
+        }
+    &-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+}

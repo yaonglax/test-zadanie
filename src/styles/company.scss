@@ -1,0 +1,302 @@
+@import 'variables';
+
+.company {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 10px;
+
+    &__container {
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        @include font-stack($fontColor: var(--titles));
+        text-transform: uppercase;
+        width: 160px;
+        margin-bottom: 30px;
+    }
+
+    &__desc {
+        width: 100%;
+
+        & p {
+            width: 100%;
+            @include font-stack($fontColor: var(--gray-text-color), $fontWeight: 400, $lineHeight: 20px, $fontSize: 14px)
+        }
+    }
+
+    &__image {
+        width: 300px;
+        height: 191px;
+        border-radius: 10px;
+        background: url('../assets/infoimg.svg') center no-repeat;
+
+
+    }
+
+    &__list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding-left: 94px;
+        margin-bottom: 54px;
+        @include font-stack($fontWeight: 400, $fontSize: 16px, $lineHeight: 23px, $fontColor: var(--gray-text-color));
+    }
+
+    &__marker {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &__label {
+        width: 130px;
+    }
+}
+
+@media (min-width: 801px) {
+    .company {
+        width: 430px;
+        gap: 10px;
+
+        &__image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+        }
+
+        &__label {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .company {
+        width: 925px;
+        height: auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+
+        &__container {
+            max-width: 50%;
+            height: auto;
+            flex: 1 0 50%;
+            overflow-wrap: break-word;
+        }
+
+        &__title {
+            width: auto;
+            margin-bottom: 8px;
+            @include font-stack($fontColor: var(--titles), $fontSize: 32px, $lineHeight: 49px);
+        }
+
+        &__desc {
+            width: auto;
+            height: 161px;
+            overflow-wrap: break-word;
+            & p {
+                width: 100%;
+                @include font-stack($fontColor: var(--gray-text-color), $fontWeight: 400, $lineHeight: 20px, $fontSize: 16px)
+            }
+        }
+
+        &__image {
+            width: 400px;
+            height: 250px;
+            border-radius: 10px;
+            background-image: url('../assets/infoimg2.svg');
+            background-size: cover;
+        }
+
+        &__list {
+            display: flex;
+            height: auto;
+            flex: 2 0 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__item {
+            margin-bottom: 0;
+            width: 100%;
+            height: auto;
+            @include font-stack($fontColor: var(--gray-text-color), $fontWeight: 400, $lineHeight: 20px, $fontSize: 16px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+        }
+
+        &__marker { 
+           position: relative;
+           top:0;
+           left: -15px;
+           transform: translateY(0);
+           width: 100px;
+           height: 100px;
+        }
+
+        &__label {
+            display: block;
+            
+        }
+    }
+}
+
+@media (min-width: 1281px) {
+    .company {
+        width: 1081px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__container {
+            width: 50%;
+            height: auto;
+            flex: 1 0 50%;
+            overflow-wrap: break-word;
+        }
+
+        &__title {
+            width: auto;
+            margin-bottom: 15px;
+            @include font-stack($fontColor: var(--titles), $fontSize: 36px, $lineHeight: 49px);
+        }
+
+        &__desc {
+            width: auto;
+            height: 161px;
+            overflow-wrap: break-word;
+            & p {
+                width: 100%;
+                
+                @include font-stack($fontColor: var(--gray-text-color), $fontWeight: 400, $lineHeight: 23px, $fontSize: 16px)
+            }
+        }
+
+        &__image {
+            width: 460px;
+            height: 250px;
+            border-radius: 10px;
+            background-image: url('../assets/infoimg2.svg');
+            background-size: cover;
+        }
+
+        &__list {
+            display: flex;
+            height: auto;
+            flex: 2 0 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__item {
+            
+            margin-bottom: 0;
+            width: 100%;
+            height: auto;
+            @include font-stack($fontWeight: 400, $fontSize: 16px, $lineHeight: 23px, $fontColor: var(--gray-text-color));
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+        }
+
+        &__marker { 
+           position: relative;
+           top:0;
+           left: -15px;
+           transform: translateY(0);
+           width: 100px;
+           height: 100px;
+        }
+
+    }
+}
+
+@media (min-width: 1920px) {
+    .company {
+        width: 1180px;
+        height: auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__container {
+            width: 50%;
+            height: auto;
+            flex: 1 0 50%;
+        }
+
+        &__title {
+            width: auto;
+            margin-bottom: 40px;
+            @include font-stack($fontColor: var(--titles), $fontSize: 36px, $lineHeight: 49px);
+        }
+
+        &__desc {
+            width: 645px;
+            height: 161px;
+            & p {
+                width: 100%;
+                @include font-stack($fontColor: var(--gray-text-color), $fontWeight: 400, $lineHeight: 23px, $fontSize: 16px)
+            }
+        }
+
+        &__image {
+            width: 460px;
+            height: 250px;
+            border-radius: 10px;
+            background-image: url('../assets/infoimg2.svg');
+            background-size: cover;
+        }
+
+        &__list {
+            display: flex;
+            height: auto;
+            flex: 2 0 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__item {
+            margin-bottom: 0;
+            width: 100%;
+            height: auto;
+            @include font-stack($fontWeight: 400, $fontSize: 16px, $lineHeight: 23px, $fontColor: var(--gray-text-color));
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+
+        &__marker { 
+           position: relative;
+           top:0;
+           left: -15px;
+           transform: translateY(0);
+           width: 100px;
+           height: 100px;
+
+        }
+    }
+}

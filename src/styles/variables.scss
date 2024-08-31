@@ -1,0 +1,16 @@
+:root {
+    --bg-color-white: rgba(255, 255, 255, 1);
+    --bg-color: rgba(240, 245, 251, 1);
+    --titles: rgba(24, 21, 75, 1);
+    --gray-text-color: rgba(48, 50, 57, 1);
+    --light-gray-text-color: rgba(155, 155, 155, 1);
+}
+
+@mixin font-stack($lineHeight: 30px, $fontSize: 22px, $fontWeight: 800, $fontColor: var(--bg-color-white)){
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    font-size: $fontSize;
+    color: $fontColor;
+    
+  }

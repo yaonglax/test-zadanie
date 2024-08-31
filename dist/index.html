@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mein Miner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+<script defer src="bundle5fbec48a1604a009aa87.js"></script></head>
+
+<body>
+    <header class="header">
+        <div class="header__info">
+            <div class="header__contacts">
+                <span class="header__email">mein@miner.com</span>
+                <span class="header__phone">+7 (999) 999-99-99</span>
+            </div>
+            <div class="header__socials">
+                <img alt="tg-icon" class="header__telegram">
+                <img alt="whats-icon" class="header__whatsapp">
+            </div>
+        </div>
+        <div class="header__main">
+        <img alt="logo" class="header__logo">
+        <ul class="header__list header__list--hidden">
+            <li class="header__item dropdown">
+                <a href="#">Каталог товаров</a><button class="header__dropdown-button"></button></li>
+                <ul class="header__list header__list--dropdown">
+                <li class="header__item--dropdown"><a href="#">GPU фермы</a></li>
+                <li class="header__item--dropdown"><a href="#">Видеокарты</a></li>
+                <li class="header__item--dropdown"><a href="#">Аксессуары</a></li>
+                </ul>
+            <li class="header__item"><a href="#">Цены</a></li>
+            <li class="header__item"><a href="#">Калькулятор</a></li>
+            <li class="header__item"><a href="#">Доставка</a></li>
+            <li class="header__item"><a href="#">Отзывы</a></li>
+        </ul>
+        <button class="header__button--hidden" type="button">Заказать звонок</button>
+        <div class="header__buttons">
+            <button class="header__button header__search" type="button"><img alt="heart-icon"
+                class="header__button-search header__icon">
+        </button>
+            <button class="header__button header__favorite" type="button"><img alt="heart-icon"
+                    class="header__button-favorite header__icon">
+                <div class="header__label">6</div>
+            </button>
+            <button class="header__button header__cart" type="button"><img alt="cart-icon" class="header__button-cart header__icon">
+                <div class="header__label">3</div>
+            </button>
+            <button class="header__button" type="button"><img alt="menu-icon"
+                    class="header__button-menu header__icon"></button>
+        </div>
+    </div>
+    </header>
+    <main class="main">
+        <div class="overlay"></div>
+        <nav class="menu">
+            <div class="menu__input-wrapper">
+                <input type="text" class="menu__input" placeholder="Поиск">
+                <button class="menu__button-input"></button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item dropdown">
+                    <a href="#">Каталог товаров</a><button class="menu__button"></button></li>
+                    <ul class="menu__list menu__list--hide">
+                    <li class="menu__item--hide"><a href="#">GPU фермы</a></li>
+                    <li class="menu__item--hide"><a href="#">Видеокарты</a></li>
+                    <li class="menu__item--hide"><a href="#">Аксессуары</a></li>
+                    </ul>
+                <li class="menu__item"><a href="#">Цены</a></li>
+                <li class="menu__item"><a href="#">Калькулятор</a></li>
+                <li class="menu__item"><a href="#">Доставка</a></li>
+                <li class="menu__item"><a href="#">Отзывы</a></li>
+            </ul>
+            <div class="menu__info">
+                <span class="menu__email">mein@miner.com</span>
+                <span class="menu__phone">+7 (999) 999-99-99</span>
+            </div>
+            <div class="menu__footer">
+                <button class="menu__footer-button">Заказать звонок</button>
+                <div class="menu__socials">
+                    <img alt="tg-icon" class="menu__icon telegram">
+                <img alt="whatsapp-icon" class="menu__icon whatsapp">
+                </div>
+            </div>
+        </nav>        
+        <div class="banner">
+            <div class="banner--big">
+                <label class="banner__title banner__title--big">оборудование для майнинга оптом</label>
+                <label class="banner__subtitle--big">с гарантией 12 месяцев</label>
+                <button class="banner__button" type="button">Перейти в каталог</button>
+                <img alt="miner-img" class="banner__img--big">
+                <div class="banner__ellipse"></div>
+                <div class="pagination banner__pagination">
+                    <span class="pagination__dot active"></span>
+                    <span class="pagination__dot"></span>
+                    <span class="pagination__dot"></span>
+                    <span class="pagination__dot"></span>
+                </div>
+            </div>
+            <div class="banner--small">
+                <label class="banner__title banner__title--small">выгодное предложение</label>
+                <label class="banner__discount">-20%</label>
+                <label class="banner__subtitle--small">на все товары Antminer</label>
+                <img alt="miner-img" class="banner__img--small">
+                <button class="banner__link"><a>В каталог <img alt="arrow" class="banner__arrow"></a></button>
+                <div class="banner__blue-ellipse"></div>
+            </div>
+        </div>
+
+        <div class="categories">
+            <span class="categories__title">категории товаров</span>
+            <ul class="categories__list"></ul>
+        </div>
+
+        <div class="benefits-cont">
+            <h2 class="benefits-cont__title">наши преимущества</h2>
+            <div class="benefits-cont__blue-ellipse--small"></div>
+            <ul class="benefits-cont__list">
+                <li class="benefits-cont__item">
+                    Более 5 лет успешной работы
+                </li>
+                <li class="benefits-cont__item">
+                    Сотни положительных отзывов
+                </li>
+                <li class="benefits-cont__item">
+                    Работаем по всей России
+                </li>
+                <li class="benefits-cont__item">
+                    Сотрудничество с производителем
+                </li>
+                <li class="benefits-cont__item">
+                    Гарантия на оборудование
+                </li>
+                <li class="benefits-cont__item">
+                    Собственный склад в Москве
+                </li>
+            </ul>
+            <div class="benefits-cont__blue-ellipse--big"></div>
+            <img alt="miner-img" class="benefits-cont__img">
+        </div>
+        <div class="catalog">
+            <label class="catalog__title">хиты продаж</label>
+            <div class="cards-cont">
+            </div>
+            <span class="catalog__button" type="button">Показать еще</span>
+            <div class="pagination catalog__pagination">
+                <span class="pagination__dot active"></span>
+                <span class="pagination__dot"></span>
+                <span class="pagination__dot"></span>
+                <span class="pagination__dot"></span>
+            </div>
+        </div>
+        <div class="company">
+            <div class="company__container">
+            <h2 class="company__title">о компании</h2>
+            <article class="company__desc">
+                <p>С 2017 года Main-miner поставляет технику для майнинга на 
+                    российский рынок оптом. За пять лет мы смогли укрепить свои позиции на рынке
+                    оборудования, вырастили персонал, прекрасно разбирающийся в каждом типе асиков
+                    и комплектующих</p>
+                <br>
+                <p>Если вы хотите купить асики оптом, то с нами можете быть уверены как в 
+                    качестве техники, так и в надёжности сотрудничества. Лучше всего о нас 
+                    говорит репутация!</p>
+            </article>
+        </div>
+            <div class="company__image"></div>
+            <ul class="company__list"></ul>
+        </div>
+
+        <div class="form">
+            <h1 class="form__title">не нашли то, что искали?</h1>
+            <h2 class="form__subtitle">свяжитесь с нами, мы вам поможем!</h2>
+            <p class="form__desc">Заполните форму и мы свяжемся с Вами в ближайшее время</p>
+            <form class="form-container">
+            <input type="text" class="form__input" placeholder="Ваше имя" required>
+            <input type="tel" class="form__input phone__input"  placeholder="Ваш телефон" required >
+            <div class="form__agreement">
+                <input type="checkbox" class="form__checkbox" id="checkbox">
+                <span class="form__custom-checkbox"></span>
+                <label for="checkbox" class="form__agreement-text">Согласен на обработку <a href="./">персональных данных</a></label>
+            </div>
+            <button class="form__button" type="submit">Отправить</button>
+        </form>
+            <div class="form__blue-ellipse"></div>
+        </div>
+        <div class="contacts">
+            <div class="contacts__left-column">
+            <h1 class="contacts__title">контакты</h1>
+            <ul class="contacts__list"></ul>
+            <div class="contacts__socials">
+                <img alt="tg-icon" class="contacts__icon telegram">
+                <img alt="whatsapp-icon" class="contacts__icon whatsapp">
+            </div>
+        </div>
+            <div alt="map" class="contacts__map">
+                <img alt="location-icon" class="contacts__location">
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <img class="footer__logo" alt="logo-icon">
+        <button class="footer__button" type="button">Заказать звонок</button>
+        <ul class="footer__list">
+            <h2 class="footer__list-title">покупателям</h2>
+            <li class="footer__item">О компании</li>
+            <li class="footer__item">О компании</li>
+            <li class="footer__item">О компании</li>
+            <li class="footer__item">О компании</li>
+            <li class="footer__item">О компании</li>
+            <li class="footer__item">О компании</li>
+        </ul>
+        <ul class="footer__list">
+            <h2 class="footer__list-title">каталог товаров</h2>
+            <li class="footer__item">Asic miners</li>
+            <li class="footer__item">Asic miners</li>
+            <li class="footer__item">Asic miners</li>
+            <li class="footer__item">Asic miners</li>
+            <li class="footer__item">Asic miners</li>
+            <li class="footer__item">Asic miners</li>
+        </ul>
+        <div class="footer__info">
+            <span class="footer__text">Публичная оферта</span>
+            <span class="footer__text">Политика конфиденциальности</span>
+        </div>
+        <span class="footer__label">© Maxmainers, 2022</span>
+    </footer>
+</body>
+
+</html>

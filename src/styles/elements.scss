@@ -1,0 +1,84 @@
+@import 'variables';
+@import 'normalize';
+
+.banner__button:disabled,
+.form__button:disabled,
+.footer__button:disabled {
+    background-color: rgba(255, 255, 255, 0.6);
+    @include font-stack($fontWeight: 700, $fontSize: 15px, $lineHeight: 20.5px, $fontColor: rgba(24, 21, 75, 0.7));
+}
+
+.banner__button:hover,
+.form__button:hover,
+.footer__button:hover {
+    box-shadow: 0px 4px 30px 0px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.2s ease-in;
+}
+
+.banner__button:active,
+.form__button:active,
+.footer__button:active {
+    background-color: rgba(255, 255, 255, 1);
+    @include font-stack($fontWeight: 700, $fontSize: 15px, $lineHeight: 20.5px, $fontColor: rgba(24, 21, 75, 0.15));
+}
+
+
+input[type='text'],
+input[type='tel'] {
+    outline: none;
+    padding-left: 20px;
+}
+
+input[type='text']::placeholder,
+input[type='tel']::placeholder {
+    padding-left: 0;
+}
+
+input[type='text']:not(.menu__input):valid,
+input[type='tel']:not(.menu__input):valid {
+    border: 1px solid rgba(243, 243, 243, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
+    @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px, $fontColor: rgba(243, 243, 243, 1));
+}
+
+input[type='text']:not(.menu__input):focus,
+input[type='tel']:not(.menu__input):focus {
+    outline: none;
+    border: 1px solid rgba(243, 243, 243, 1);
+    background-color: rgba(255, 255, 255, 0.5);
+    @include font-stack($fontWeight: 400, $fontSize: 14px, $lineHeight: 19px, $fontColor: rgba(243, 243, 243, 1));
+}
+
+input[type='text']:not(.menu__input):focus:invalid,
+input[type='tel']:not(.menu__input):focus:invalid {
+    border: 1px solid rgba(255, 20, 20, 1);
+}
+
+.banner__link:disabled,
+.categories__link:disabled {
+    color: rgba(24, 21, 75, 0.4);
+}
+
+.header__button--hidden:disabled,
+.card__button:disabled, .menu__footer-button:disabled {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        linear-gradient(73.56deg, #0D748B -10.13%, #1A0B73 75.49%);
+
+}
+
+.header__button--hidden:hover,
+.card__button:hover, .menu__footer-button:hover {
+    box-shadow: 0px 4px 20px 0px rgba(26, 11, 115, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+.header__button--hidden:active,
+.card__button:active, .menu__footer-button:active {
+    background: linear-gradient(73.56deg, #0D748B -10.13%, #1A0B73 75.49%),
+        linear-gradient(0deg, rgba(24, 21, 75, 0.6), rgba(24, 21, 75, 0.6));
+}
+
+button,
+a {
+    cursor: pointer;
+}

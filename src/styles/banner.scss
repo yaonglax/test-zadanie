@@ -14,10 +14,12 @@
         &--big {
             margin-top: 10px;
             @include font-stack($fontWeight: 600, $fontSize: 16px, $lineHeight: 22px);
+            
         }
 
         &--small {
             @include font-stack($fontWeight: 600, $fontSize: 14px, $lineHeight: 17.5px);
+           
         }
     }
 
